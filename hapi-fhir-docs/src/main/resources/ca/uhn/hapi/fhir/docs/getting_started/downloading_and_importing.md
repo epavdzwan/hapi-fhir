@@ -45,12 +45,18 @@ Note that if you wish to perform validation, you may also want to include the "v
 
 # Gradle Users
 
-If you are using Gradle, you may use the following dependencies. Note that if you are doing Android development, you may want to use our [Android build](/docs/android/client.html) instead.
+If you are using Gradle 7+, you may use the following dependencies. Note that if you are doing Android development, you may want to use our [Android build](/docs/android/client.html) instead.
 
 ```groovy
-compile 'ca.uhn.hapi.fhir:hapi-fhir-base:${project.version}'
-compile 'ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:${project.version}'
-compile 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:${project.version}'
+ext {
+   hapiVersion = "6.6.0"
+}
+
+dependencies {
+    implementation 'ca.uhn.hapi.fhir:hapi-fhir-base:${hapiVersion}'
+    implementation 'ca.uhn.hapi.fhir:hapi-fhir-structures-dstu2:${hapiVersion}'
+    implementation 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:${hapiVersion}'
+}
 ```
 
 <a name="snapshot"/>
